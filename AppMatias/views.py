@@ -8,7 +8,7 @@ from AppMatias.models import Familiar
 
 def familiar(request):
     
-    familiar1 = Familiar(nombre="Claudia", apellido="Roger", edad=58)
+    familiar1 = Familiar(nombre="Claudia", apellido="Roger", edad=58, fecha_nacimiento="1964-7-17")
     familiar1.save()
     contexto = {
         "familiar":familiar1,
@@ -16,22 +16,25 @@ def familiar(request):
     return render(request, 'familiares.html', contexto)
 
 
-def familiardos(request):
+def familiar2(request):
     
-    familiar2 = Familiar(nombre="Julio", apellido="Zucchi", edad=59)
-    familiar2.save()
-    contexto = {
-        "familiardos":familiar2,
-            }
-    return render(request, 'familiares.html', contexto)
-
-
-def familiartres(request):
+    contexto={
+        'nombre':'Julio', 
+        'apellido':'Zucchi',
+        'edad': 59,
+        'fecha_nacimiento': '1963-4-15',
+    }
     
-    familiar3 = Familiar(nombre="Bautista", apellido="Zucchi", edad=16)
-    familiar3.save()
-    contexto = {
-        "familiar":familiar3,
-            }
-    return render(request, 'familiares.html', contexto)
+    return render(request, 'familiares2.html', contexto)
 
+
+def familiar3(request):
+    
+    contexto={
+        'nombre':'Bautista', 
+        'apellido':'Zucchi',
+        'edad': 16,
+        'fecha_nacimiento': '2005-9-20',
+    }
+    
+    return render(request, 'familiares3.html', contexto)
