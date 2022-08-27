@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Familiares 3</title>
-</head>
-<body>
+
+{% extends 'index.html' %}
+
+{% block title %}
+Familiar 3
+{% endblock %}
+
+{% block inicio %}
 
 En esta página podrán ver los datos de mis familiares:
-<br>
 <br>
 <br>
 Familiar 3:
@@ -23,7 +21,4 @@ Edad: {{edad}}
 <br>
 Fecha de Nacimiento: {{fecha_nacimiento}}
 
-</body>
-</html>
-</body>
-</html>
+{% endblock %}

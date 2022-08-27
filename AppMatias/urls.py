@@ -7,6 +7,6 @@ urlpatterns = [
     path('familiar/', familiar, name='AppMatiasFamiliar'),
     path('familiar2/', familiar2, name='AppMatiasFamiliar2'),
     path('familiar3/', familiar3, name='AppMatiasFamiliar3'),
-    path('', inicio),
+    path('', inicio, name='AppMatiasInicio'),
     
 ]
