@@ -13,7 +13,7 @@ def familiar(request):
     contexto = {
         "familiar":familiar1,
             }
-    return render(request, 'familiares.html', contexto)
+    return render(request, 'AppMatias/familiares.html', contexto)
 
 
 def familiar2(request):
@@ -25,7 +25,7 @@ def familiar2(request):
         'fecha_nacimiento': '1963-4-15',
     }
     
-    return render(request, 'familiares2.html', contexto)
+    return render(request, 'AppMatias/familiares2.html', contexto)
 
 
 def familiar3(request):
@@ -37,4 +37,9 @@ def familiar3(request):
         'fecha_nacimiento': '2005-9-20',
     }
     
-    return render(request, 'familiares3.html', contexto)
+    return render(request, 'AppMatias/familiares3.html', contexto)
+
+
+def inicio(request):
+    
+    return render(request, 'index.html')
